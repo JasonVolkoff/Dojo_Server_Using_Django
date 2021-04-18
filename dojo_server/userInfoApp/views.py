@@ -6,4 +6,5 @@ def index(request):
 
 
 def result(request):
-    return render(request, "userIndex.hmtl", context)
+    print(request.method)
+    return render(request, "userIndex.html")
