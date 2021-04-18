@@ -13,5 +13,8 @@
     color: rgb(46, 34, 34);
     background-color: rgb(13, 170, 60);
     font-weight: bold;
-
+}
+/* userIndex.html specific css (yeah I know it's bad form to use the same CSS for two htmls) */
+#box > div div p:first-child {
+    font-weight: bold;
 }

@@ -15,7 +15,35 @@
 </head>
 
 <body>
+    <div class="container pt-5">
+        <div id="box">
+            <h1>Submitted Info</h1>
+            <div>
+                <div class="row">
+                    <p class="col-sm-3">Name:</p>
+                    <p class="col-sm-9">{{name}}</p>
+                </div>
+                <div class="row">
+                    <p class="col-sm-3">Location:</p>
+                    <p class="col-sm-9">{{location}}</p>
+                </div>
+                <div class="row">
+                    <p class="col-sm-3">Language:</p>
+                    <p class="col-sm-9">{{language}}</p>
+                </div>
+                <div class="row">
+                    <p class="col-sm-12">Comments:</p>
+                    <p class="col-sm-12">{{comment}}</p>
+                </div>
+            </div>
 
+            <form action="/home">
+                <div id="subButton">
+                    <button type="submit" class="btn btn-md float-right">Go Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
