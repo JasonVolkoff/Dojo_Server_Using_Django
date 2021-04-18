@@ -1,0 +1,17 @@
+.container > div {
+    border-style: solid;
+    border-radius: 1em;
+    padding: 20px 15px;
+    margin: auto;
+}
+#subButton {
+    min-height: 20px;
+    margin: 15px;
+}
+#subButton button {
+    box-shadow: 2px 2px #888888;
+    color: rgb(0, 0, 0);
+    background-color: rgb(13, 170, 60);
+    text-shadow: 1px 1px rgb(0, 0, 0);
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <div class="container pt-5">
+        <div>
+            <form action="/request" method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="userName" class="col-sm-3 col-form-label">Your Name:</label>
+                    <div class="col-sm-9">
+                        <input name="userName" type="text" class="form-control" id="userName" placeholder="John Doe">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="userLocation" class="col-sm-3 col-form-label">Dojo Location:</label>
+                    <div class="col-sm-9">
+                        <select name="userLocation" id="userLocation" class="form-control">
+                            <option selected>San Jose</option>
+                            <option>Fresno</option>
+                            <option>Oakland</option>
+                            <option>Los Angeles</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="userLanguage" class="col-sm-3 col-form-label">Favorite Language:</label>
+                    <div class="col-sm-9">
+                        <select name="userLanguage" id="userLanguage" class="form-control">
+                            <option selected>Python</option>
+                            <option>JavaScript</option>
+                            <option>C++</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label name="userComment" for="userComment">Comment (optional):</label>
+                    <textarea class="form-control col-sm-12" id="userComment" rows="3"></textarea>
+                </div>
+                <div id="subButton">
+                    <button type="submit" class="btn btn-md float-right">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
