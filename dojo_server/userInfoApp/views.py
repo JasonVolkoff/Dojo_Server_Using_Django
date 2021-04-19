@@ -5,17 +5,19 @@ def index(request):
     return render(request, "index.html")
 
 
-def home(request):
-    return HttpResponseRedirect("/")
+def results(request):
+    context = {
+        "results": request.session["results"]
+    }
+    return render(request, "userIndex.html", context)
 
 
-def result(request):
+def createUser(request):
     if request.method == "POST":
-        context = {
+        request.session["results"] = {
             "name": request.POST["userName"],
-            "language": request.POST["userLanguage"],
             "location": request.POST["userLocation"],
-            "comment": request.POST["userComment"],
+            "language": request.POST["userLanguage"],
+            "comment": request.POST["userComment"]
         }
-        return render(request, "userIndex.html", context)
-    return render(request, "userIndex.html")
+        return redirect("/results")
